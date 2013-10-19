@@ -12,7 +12,7 @@ license=('GPL3')
 url="https://github.com/LiuLang/kwplayer"
 depends=('python>=3.3' 'python-cairo' 'python-dbus' 'python-gobject' 'gstreamer' 'gst-plugins-base' 'gst-plugins-good' 'gst-plugins-ugly' 'gst-libav' 'gnome-icon-theme-symbolic')
 optdepends=('python-mutagenx' 'leveldb' 'plyvel')
-source=("https://pypi.python.org/packages/source/k/kwplayer/${pkgname}-${pkgve}.tar.gz")
+source=("https://pypi.python.org/packages/source/k/kwplayer/${pkgname}-${pkgver}.tar.gz")
 md5sums=('SKIP')
 
 build() {
