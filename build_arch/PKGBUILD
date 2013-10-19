@@ -1,4 +1,4 @@
-# PKGBUILD for kwplayer 2013-10-17
+# PKGBUILD for kwplayer 2013-10-19
 # Maintainer: MJsaka <qiuxuenan@gmail.com>
 # Copyright
 # This PKGBUILD published with the GPLv3 license
@@ -10,10 +10,10 @@ pkgdesc='An elegant music player which can get songs from kuwo.cn'
 arch=('any')
 license=('GPL3')
 url="https://github.com/LiuLang/kwplayer"
-depends=('python>=3.3' 'python-cairo' 'python-dbus' 'python-gobject' 'gstreamer' 'gst-plugins-base' 'gst-plugins-good' 'gst-plugins-ugly' 'gst-libav' 'python-mutagenx')
-optdepends=('leveldb' 'plyvel')
-source=("https://pypi.python.org/packages/source/k/kwplayer/kwplayer-3.1.tar.gz")
-md5sums=('4f5bc4077fb08a8af404bf7b6048bc0d')
+depends=('python>=3.3' 'python-cairo' 'python-dbus' 'python-gobject' 'gstreamer' 'gst-plugins-base' 'gst-plugins-good' 'gst-plugins-ugly' 'gst-libav' 'gnome-icon-theme-symbolic')
+optdepends=('python-mutagenx' 'leveldb' 'plyvel')
+source=("https://pypi.python.org/packages/source/k/kwplayer/${pkgname}-${pkgver}.tar.gz")
+md5sums=('SKIP')
 
 build() {
     cd "${srcdir}/${pkgname}-${pkgver}"
@@ -24,4 +24,3 @@ package() {
     cd "${srcdir}/${pkgname}-${pkgver}"
     python setup.py install --root="$pkgdir"
 }
-
