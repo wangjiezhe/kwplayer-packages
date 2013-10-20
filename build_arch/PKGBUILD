@@ -4,7 +4,7 @@
 # This PKGBUILD published with the GPLv3 license
 
 pkgname=kwplayer
-pkgver=3.1
+pkgver=3.1.2
 pkgrel=1
 pkgdesc='An elegant music player which can get songs from kuwo.cn'
 arch=('any')
