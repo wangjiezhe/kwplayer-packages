@@ -17,6 +17,14 @@ deb包里已经默认加入了Debian软件库中不存在的软件包, 这是为
 
 Fedora系
 ========
+Fedora 的打包工作是由Wang Jiezhe (@wangjiezhe) 负责. 目前只测试了Fedora19,
+其它版本正在测试中.
+
+只需要下载这个rpm包就可以了. 安装的话: `# yum localinstall kwplayer-x.x.rpm`
+, 这样的话, 系统会自动处理软件包依赖问题. 使用时有遇到问题的, 请尽快反馈,
+这样的话就可以很快修复问题.
+
+源码包及打包脚本, 在build_rpm/里.
 
 
 Arch Linux
