@@ -26,6 +26,7 @@ Fedora 的打包工作是由Wang Jiezhe (@wangjiezhe) 负责. 目前只测试了
 这样的话就可以很快修复问题.
 
 未解决问题: Fedora20-ALpha 中无法播放mp4.
+建议: Fedora20-Alpha用户如果有看mv的需要请暂时从源代码安装
 
 源码包及打包脚本, 在build_rpm/里.
 
