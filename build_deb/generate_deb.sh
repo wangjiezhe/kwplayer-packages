@@ -6,6 +6,8 @@
 # in the LICENSE file.
 
 # Generate deb package from source.
+# 1.3 - 2013.12.7
+# update version automatically
 # 1.2 - 2013.10.17
 # move deb package to upper folder
 # v1.1 - 2013.10.3
@@ -20,7 +22,9 @@ usage() {
 
 
 DIR="fakeroot/"
-DEB="kwplayer.deb"
+PACKAGE=$(sed -n '/Package:/p' control | awk '{print $2}')
+VERSION=$(sed -n '/Version:/p' control | awk '{print $2}')
+DEB="${PACKAGE}-${VERSION}.deb"
 if [ ! -d $DIR ]; then
 	echo 'Error: no such directory!!!'
 	usage
