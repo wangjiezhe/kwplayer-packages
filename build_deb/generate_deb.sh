@@ -60,4 +60,7 @@ GROUP=$(stat -c%g "$0")
 chown $OWNER:$GROUP $DEB
 echo 'file owner and group owner changed..'
 
+rm -rvf ../*.deb
+echo 'Old deb packages removed'
+
 mv -vf $DEB ..
