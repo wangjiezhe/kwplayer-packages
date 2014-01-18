@@ -1,9 +1,9 @@
 Package: kwplayer
-Version: 3.2.4-2
+Version: 3.2.7-1
 Architecture: all
 Maintainer: LiuLang<gsushzhsosgsu@gmail.com>
 Installed-Size: 1720
-Depends: python3-gi, gstreamer1.0-libav|gstreamer0.10-ffmpeg, gstreamer1.0-plugins-base|gstreamer0.10-plugins-base, gstreamer1.0-plugins-good|gstreamer0.10-plugins-good, gstreamer1.0-plugins-ugly|gstreamer0.10-plugins-ugly, gir1.2-gstreamer-1.0|gir1.2-gstreamer-0.10, gir1.2-gst-plugins-base-1.0|gir1.2-gst-plugins-base-0.10, gnome-icon-theme-symbolic, python3-dbus
+Depends: python3-gi, gstreamer1.0-libav|gstreamer0.10-ffmpeg, gstreamer1.0-plugins-base|gstreamer0.10-plugins-base, gstreamer1.0-plugins-good|gstreamer0.10-plugins-good, gstreamer1.0-plugins-ugly|gstreamer0.10-plugins-ugly, gir1.2-gstreamer-1.0|gir1.2-gstreamer-0.10, gir1.2-gst-plugins-base-1.0|gir1.2-gst-plugins-base-0.10, gir1.2-notify-0.7, gnome-icon-theme-symbolic, python3-dbus
 Recommends: python3-leveldb
 Section: gnome
 Priority: optional

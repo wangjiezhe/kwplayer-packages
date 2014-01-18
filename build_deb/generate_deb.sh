@@ -15,19 +15,14 @@
 # v1.0 -2013.9.4
 # project inited.
 
-usage() {
-	echo "$0"
-	echo 'This program need root permission'
-}
-
 
 DIR="fakeroot/"
 PACKAGE=$(sed -n '/Package:/p' control | awk '{print $2}')
 VERSION=$(sed -n '/Version:/p' control | awk '{print $2}')
-DEB="${PACKAGE}-${VERSION}.deb"
+DEB="${PACKAGE}_${VERSION}_all.deb"
 if [ ! -d $DIR ]; then
-	echo 'Error: no such directory!!!'
-	usage
+	echo 'Error: no such directory.'
+    echo 'Please run ./build.sh first'
 	exit 1
 fi
 
@@ -59,5 +54,8 @@ OWNER=$(stat -c%u "$0")
 GROUP=$(stat -c%g "$0")
 chown $OWNER:$GROUP $DEB
 echo 'file owner and group owner changed..'
+
+rm -rvf ../*.deb
+echo 'Old deb packages removed'
 
 mv -vf $DEB ..

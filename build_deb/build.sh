@@ -25,7 +25,6 @@ if [ -d 'fakeroot' ]; then
 fi
 
 PYLIB='fakeroot/usr/lib/python3/dist-packages/'
-APP='kwplayer'
 
 mkdir -vp fakeroot/usr/bin fakeroot/DEBIAN $PYLIB
 
