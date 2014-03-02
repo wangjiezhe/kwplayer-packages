@@ -8,7 +8,7 @@
 %{!?python3_sitelib: %global python3_sitelib %(%{__python3} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())")}
 
 Name:           kwplayer
-Version:        3.2.8
+Version:        3.2.9
 Release:        1%{?dist}
 Summary:        An elegant music player which can get songs from kuwo.cn
 
