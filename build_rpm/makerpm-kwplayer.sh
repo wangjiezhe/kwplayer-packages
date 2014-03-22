@@ -12,8 +12,8 @@ version=`echo $1 | sed "s/-/./g"`
 release=$2
 
 # Replace these variables by your pathes
-GIT=~/Downloads/github/wangjiezhe/kwplayer
-DEST=~/Downloads/github/wangjiezhe/kwplayer-packages
+GIT=PATH_TO_YOUR_SOURCE_DIR
+DEST=PATH_TO_YOUR_DEST_DIR
 
 SOURCES=~/rpmbuild/SOURCES
 SPECS=~/rpmbuild/SPECS
@@ -33,7 +33,7 @@ sed -i -e "/^Version/s/[0-9]\+\.[0-9]\+\.[0-9]\+/$version/" kwplayer.spec
 sed -i -e "/^Release/s/[0-9]\+/$release/" kwplayer.spec
 rpmbuild -ba kwplayer.spec
 cp kwplayer.spec $DEST/build_rpm/
-cp makerpm-kwplayer.sh $DEST/build_rpm/
+# cp makerpm-kwplayer.sh $DEST/build_rpm/
 
 cd $RPMS/
 cp kwplayer-"$version"-"$release".fc20.noarch.rpm $DEST/
