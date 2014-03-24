@@ -10,12 +10,11 @@ fi
 
 if [ ! -d  $HOME/rpmbuild/SPECS ]
 then
-	which rpmdev-setuptre 2>/dev/null
-	if (( $? == 0 ))
+	if [ -n "$(which rpmdev-setuptree)" ]
 	then
 		rpmdev-setuptree
 	else
-		echo "The command rpmdev-setuptree doesn't in your path.'"
+		echo "The command \`rpmdev-setuptree\` doesn't in your path.'"
 		echo "Please check you path or if your have installed package development tools."
 		echo "If not, install the core development tools:"
 		echo "yum install @development-tools"
