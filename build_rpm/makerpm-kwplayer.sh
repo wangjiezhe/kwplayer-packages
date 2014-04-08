@@ -4,11 +4,14 @@
 
 if [ $# -ne 2 ]
 then
-	echo "Usage: `basename $0` version release"
+	echo "Usage: $(basename "$0") version release"
 	exit 2
 fi
 
-if [ ! -d  $HOME/rpmbuild/SPECS ]
+version=${1//-/.}
+release=$2
+
+if [ ! -d  "$HOME"/rpmbuild/SPECS ]
 then
 	if [ -n "$(which rpmdev-setuptree)" ]
 	then
@@ -23,37 +26,34 @@ then
 	fi
 fi
 
-version=`echo $1 | sed "s/-/./g"`
-release=$2
-
 # Replace these variables by your pathes
-GIT=PATH_TO_YOUR_SOURCE_DIR
-DEST=PATH_TO_YOUR_DEST_DIR
+GIT="$HOME"/Downloads/github/wangjiezhe/kwplayer
+DEST="$HOME"/Downloads/github/wangjiezhe/kwplayer-packages
 
-SOURCES=$HOME/rpmbuild/SOURCES
-SPECS=$HOME/rpmbuild/SPECS
-RPMS=$HOME/rpmbuild/RPMS/noarch
+SOURCES="$HOME"/rpmbuild/SOURCES
+SPECS="$HOME"/rpmbuild/SPECS
+RPMS="$HOME"/rpmbuild/RPMS/noarch
 
-if [ ! -f $SPECS/bcloud.spec ]
+if [ ! -f "$SPECS"/bcloud.spec ]
 then
-	cp $PWD/bcloud.spec $SPECS
+	cp "$PWD"/bcloud.spec "$SPECS"
 fi
 
-mkdir -p $SOURCES/kwplayer-"$version"
-cd $GIT/
-cp -vr HISTORY LICENSE README.md setup.py kwplayer kuwo po share $SOURCES/kwplayer-"$version"
-# rm -rf $SOURCES/kwplayer-$version/kuwo/__pycache__/
+mkdir -p "$SOURCES"/kwplayer-"$version"
+cd "$GIT"/
+cp -vr HISTORY LICENSE README.md setup.py kwplayer kuwo po share "$SOURCES"/kwplayer-"$version"
+# rm -rf "$SOURCES"/kwplayer-$version/kuwo/__pycache__/
 
-cd $SOURCES/
+cd "$SOURCES"/
 tar -cvzf kwplayer-"$version".tar.gz kwplayer-"$version"
 rm -rf kwplayer-"$version"
 
-cd $SPECS/
+cd "$SPECS"/
 sed -i -e "/^Version/s/[0-9]\+\.[0-9]\+\.[0-9]\+/$version/" kwplayer.spec
 sed -i -e "/^Release/s/[0-9]\+/$release/" kwplayer.spec
 rpmbuild -ba kwplayer.spec
-cp kwplayer.spec $DEST/build_rpm/
-# cp makerpm-kwplayer.sh $DEST/build_rpm/
+cp kwplayer.spec "$DEST"/build_rpm/
+# cp makerpm-kwplayer.sh "$DEST"/build_rpm/
 
-cd $RPMS/
-cp kwplayer-"$version"-"$release".fc20.noarch.rpm $DEST/
+cd "$RPMS"/
+cp kwplayer-"$version"-"$release".fc20.noarch.rpm "$DEST"/
