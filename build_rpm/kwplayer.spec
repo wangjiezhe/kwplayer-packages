@@ -8,8 +8,8 @@
 %{!?python3_sitelib: %global python3_sitelib %(%{__python3} -c "from distutils.sysconfig import get_python3_lib; print(get_python3_lib())")}
 
 Name:           kwplayer
-Version:        3.3.2
-Release:        2%{?dist}
+Version:        3.3.3
+Release:        1%{?dist}
 Summary:        An elegant music player which can get songs from kuwo.cn
 
 License:        GPLv3
@@ -32,6 +32,7 @@ Requires:  gstreamer1-plugins-ugly
 Requires:  gstreamer1-libav
 Requires:  gstreamer1
 Requires:  gstreamer-python
+Requires:  libnotify
 Requires:  pulseaudio
 Requires:  pulseaudio-module-x11
 # Not installed by default in KDE
