@@ -14,7 +14,7 @@ KEYWORDS="~amd64"
 LICENSE="GPL-3"
 SLOT="0"
 IUSE=" +python_single_target_python3_3 python_single_target_python3_4"
-QEQUIRED_USE="${PYTHON_REQUIRED_USE}"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 DEPEND="${PYTHON_DEPS}"
 RDEPEND="${DEPEND}
