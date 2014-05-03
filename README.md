@@ -45,5 +45,5 @@ MJsaka <qiuxuenan@gmail.com> 维护的. 使用时有什么问题, 可以直接�
 Gentoo
 ========
 Gentoo的用户, 可下载build_gentoo下的ebuild, 放入本地的overlay, 执行
-ebuild kwplayer-*.ebuild manifest, 然后通过emerge安装.
+`ebuild kwplayer-*.ebuild manifest`, 然后通过emerge安装.
 使用时有什么问题, 请联系 MJsaka <qiuxuenan@gmail.com> .
