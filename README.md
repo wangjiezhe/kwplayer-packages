@@ -41,3 +41,10 @@ Arch Linux
 Arch Linux用户, 可以直接使用build_arch/PKGBUILD脚本来安装kwplayer, 它是由
 MJsaka <qiuxuenan@gmail.com> 维护的. 使用时有什么问题, 可以直接联系他.
 非常感谢他做的工作.
+
+Gentoo
+========
+Gentoo的用户, 可下载build_gentoo下的ebuild, 放入本地的overlay, 执行
+`ebuild kwplayer-*.ebuild manifest`, 然后`emerge kwplayer`安装. 
+也可以直接下载tbz2包放入${PKGDIR}里, 然后`emerge -k kwplayer`安装.
+使用时有什么问题, 请联系 MJsaka <qiuxuenan@gmail.com> .
