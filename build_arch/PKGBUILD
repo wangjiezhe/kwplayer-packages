@@ -5,7 +5,7 @@
 
 pkgname=kwplayer
 pkgver=3.3.4
-pkgrel=1
+pkgrel=2
 pkgdesc='An elegant music player which can get songs from kuwo.cn'
 arch=('any')
 license=('GPL3')
@@ -17,10 +17,10 @@ md5sums=('e1da037aba59e5c386a8cbe25684a1a8')
 
 build() {
     cd "${srcdir}/${pkgname}-${pkgver}"
-    python setup.py build
+    python3 setup.py build
 }
 
 package() {
     cd "${srcdir}/${pkgname}-${pkgver}"
-    python setup.py install --root="$pkgdir"
+    python3 setup.py install --root="$pkgdir"
 }
