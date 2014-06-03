@@ -9,7 +9,7 @@
 
 Name:           kwplayer
 Version:        3.3.4
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        An elegant music player which can get songs from kuwo.cn
 
 License:        GPLv3
