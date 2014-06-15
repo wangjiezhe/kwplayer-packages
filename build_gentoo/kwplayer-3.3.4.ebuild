@@ -3,8 +3,9 @@
 # $Header: $
 
 EAPI=5
-GCONF_DEBUG="no"
 PYTHON_COMPAT=( python{3_3,3_4} )
+
+inherit python-r1
 
 DESCRIPTION="An elegant music player which can get songs from kuwo.cn"
 HOMEPAGE="https://github.com/LiuLang/kwplayer"
@@ -13,7 +14,6 @@ SRC_URI="https://pypi.python.org/packages/source/k/${PN}/${P}.tar.gz"
 KEYWORDS="~amd64"
 LICENSE="GPL-3"
 SLOT="0"
-IUSE=" +python_single_target_python3_3 python_single_target_python3_4"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 DEPEND="${PYTHON_DEPS}"
@@ -27,20 +27,14 @@ RDEPEND="${DEPEND}
 	media-plugins/gst-plugins-libav:1.0
 	x11-themes/gnome-icon-theme-symbolic
 	"
-src_compile() {
-	if use python_single_target_python3_3 ; then
-		python3.3 setup.py build ;
-	elif use python_single_target_python3_4 ; then
-		python3.4 setup.py build ;
-	fi
-}
+	
 src_install() {
-	if use python_single_target_python3_3 ; then
-		python3.3 setup.py install --root=${D};
-	elif use python_single_target_python3_4 ; then
-		python3.4 setup.py install --root=${D};
-	fi
+	python_foreach_impl python_domodule kuwo
+	dobin ${PN}
+	insinto usr
+	doins -r share
 }
+
 pkg_postinst() {
 	elog "you may need to install some optional dependences by yourself:"
 	elog "python3-mutagenx: for id3 tag transforming"
