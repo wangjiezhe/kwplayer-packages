@@ -5,7 +5,7 @@
 EAPI=5
 PYTHON_COMPAT=( python{3_3,3_4} )
 
-inherit python-r1
+inherit python-single-r1
 
 DESCRIPTION="An elegant music player which can get songs from kuwo.cn"
 HOMEPAGE="https://github.com/LiuLang/kwplayer"
@@ -27,9 +27,9 @@ RDEPEND="${DEPEND}
 	media-plugins/gst-plugins-libav:1.0
 	x11-themes/gnome-icon-theme-symbolic
 	"
-	
+
 src_install() {
-	python_foreach_impl python_domodule kuwo
+	python_domodule kuwo
 	dobin ${PN}
 	insinto usr
 	doins -r share
