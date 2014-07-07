@@ -5,7 +5,7 @@
 
 pkgname=kwplayer
 pkgver=3.3.5
-pkgrel=2
+pkgrel=1
 pkgdesc='An elegant music player which can get songs from kuwo.cn'
 arch=('any')
 license=('GPL3')
