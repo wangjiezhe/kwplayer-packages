@@ -4,8 +4,8 @@
 # This PKGBUILD published with the GPLv3 license
 
 pkgname=kwplayer
-pkgver=3.3.4
-pkgrel=2
+pkgver=3.3.5
+pkgrel=1
 pkgdesc='An elegant music player which can get songs from kuwo.cn'
 arch=('any')
 license=('GPL3')
@@ -13,7 +13,7 @@ url="https://github.com/LiuLang/kwplayer"
 depends=('python>=3.3' 'python-dbus' 'python-gobject' 'gstreamer' 'gst-libav' 'gst-plugins-base' 'gst-plugins-good' 'gst-plugins-ugly' 'gnome-icon-theme-symbolic')
 optdepends=('python-mutagenx: convert ID3 tag from GBK to UTF-8' 'leveldb: local cache database' 'plyvel: python3 binding of leveldb' 'python-xlib: X11 library for python' 'python-keybinder: to support global keyboard shortcuts')
 source=("https://pypi.python.org/packages/source/k/kwplayer/${pkgname}-${pkgver}.tar.gz")
-md5sums=('e1da037aba59e5c386a8cbe25684a1a8')
+md5sums=('46cd09870c595133b455a8438c2e576c')
 
 build() {
     cd "${srcdir}/${pkgname}-${pkgver}"
