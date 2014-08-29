@@ -17,15 +17,25 @@ deb包里已经默认加入了Debian软件库中不存在的软件包, 这是为
 
 Fedora系
 ========
-Fedora 的打包工作是由Wang Jiezhe (@wangjiezhe) 负责. 目前测试成功了Fedora19
-和Fedora20.
+Fedora 的打包工作是由 Wang Jiezhe (@wangjiezhe) 负责.
 
-只需要下载这个rpm包就可以了. 安装的话: `# yum localinstall kwplayer-x.x.rpm`
-升级的话: `# yum localupdate kwplayer-x.x.rpm`, 这样的话,
-系统会自动处理软件包依赖问题. 使用时有遇到问题的, 请尽快反馈,
-这样的话就可以很快修复问题.
+如果你使用 dnf 并安装了 dnf-plugins-core, 直接运行:
 
-打包脚本在build_rpm/里.
+```
+# dnf copr enable wangjiezhe/kwplayer
+# dnf install kwplayer
+```
+
+即可.
+
+或者直接到 <http://copr.fedoraproject.org/coprs/wangjiezhe/kwplayer/> 下载对应的
+repo 文件放到 /etc/yum.repos.d/ 中, 然后运行
+
+```
+# yum install kwplayer
+```
+
+打包脚本在 build\_rpm 里.
 
 其他可选包:
 
