@@ -33,6 +33,7 @@ DEST="$HOME"/Downloads/github/wangjiezhe/kwplayer-packages
 SOURCES="$HOME"/rpmbuild/SOURCES
 SPECS="$HOME"/rpmbuild/SPECS
 RPMS="$HOME"/rpmbuild/RPMS/noarch
+SRPMS="$HOME"/rpmbuild/SRPMS
 
 if [ ! -f "$SPECS"/bcloud.spec ]
 then
@@ -55,5 +56,5 @@ rpmbuild -ba kwplayer.spec
 cp kwplayer.spec "$DEST"/build_rpm/
 # cp makerpm-kwplayer.sh "$DEST"/build_rpm/
 
-cd "$RPMS"/
-cp kwplayer-"$version"-"$release".fc20.noarch.rpm "$DEST"/
+cp "$RPMS"/kwplayer-"$version"-"$release".fc20.noarch.rpm "$DEST"/
+cp "$SRPMS"/kwplayer-"$version"-"$release".fc20.src.rpm "$DEST"/build_rpm/
