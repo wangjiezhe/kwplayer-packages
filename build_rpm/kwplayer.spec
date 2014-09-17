@@ -9,7 +9,7 @@
 
 Name:           kwplayer
 Version:        3.3.7
-Release:        1%{?dist}
+Release:        3%{?dist}
 Summary:        An elegant music player which can get songs from kuwo.cn
 
 License:        GPLv3
@@ -38,10 +38,10 @@ Requires:  pulseaudio-module-x11
 # Not installed by default in KDE
 Requires:  gnome-icon-theme-symbolic
 # Optional:
-# Requires:  leveldb
-# Requires:  python3-plyvel
-# Requires:  mutagenx
-# Requires:  python3-keybinder
+Requires:  leveldb
+Requires:  python3-plyvel
+Requires:  python3-mutagen
+Requires:  python3-keybinder
 
 %description
 KW music player is used to get music resources from Internet.
