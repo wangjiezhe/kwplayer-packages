@@ -19,31 +19,21 @@ Fedora系
 ========
 Fedora 的打包工作是由 Wang Jiezhe (@wangjiezhe) 负责.
 
-如果你使用 dnf 并安装了 dnf-plugins-core, 直接运行:
+**建议安装方式:**
 
-```
-# dnf copr enable wangjiezhe/kwplayer
-# dnf install kwplayer
-```
+使用 dnf 并安装 dnf-plugins-core, 然后直接运行:
+
+	# dnf copr enable wangjiezhe/kwplayer
+	# dnf install kwplayer
 
 即可.
 
 或者直接到 <http://copr.fedoraproject.org/coprs/wangjiezhe/kwplayer/> 下载对应的
 repo 文件放到 /etc/yum.repos.d/ 中, 然后运行
 
-```
-# yum install kwplayer
-```
+	# yum install kwplayer
 
-打包脚本在 build\_rpm 里.
-
-其他可选包:
-
-* python3-plyvel
-* [python3-mutagenx](https://github.com/LordSputnik/mutagen)
-* [python3-xlib](https://github.com/LiuLang/python3-xlib)
-* [python3-keybinder](https://github.com/LiuLang/python3-keybinder)
-
+**注: 因为有几个依赖包不在官方源内, 请使用上面的 repo 文件, 否则直接安装 rpm 包可能会出错**
 
 
 Arch Linux
