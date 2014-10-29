@@ -67,7 +67,6 @@ Debian 中手动安装依赖包
 
 * python3 - 推荐python3.3以上的版本, 不然mutagen模块无法使用(用于消除mp3/ape乱码的).
 * gnome-icon-theme-symbolic
-* adwaita-icon-theme 这两个包提供了常用的图标.
 * python3-dbus
 * python3-gi  -  gkt3的python3绑定(Fedora中叫做python3-gobject);
 * gstreamer1.0-plugins-base
