@@ -15,8 +15,8 @@
 # project inited.
 
 SRC="../.."
-KW_SRC="$SRC/kuwomusic"
-MUT_SRC="$SRC/mutagenx/mutagenx"
+KW_SRC="$SRC/kwplayer"
+MUT_SRC="$SRC/mutagen/mutagen"
 XLIB_SRC="$SRC/python3-xlib/Xlib"
 KEYBIND_SRC="$SRC/python3-keybinder/keybinder"
 
