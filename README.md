@@ -5,11 +5,15 @@
 
 Debian系
 =======
-deb包里已经默认加入了Debian软件库中不存在的软件包, 比如python3-keybinder.
 
-先下载kwplayer.deb, 可以直接双击就能安装这个deb包. 当然, 也可以在终端里安装:
+需要下载 python3-xlib_xx.deb, python3-keybinder_xx.deb, kwplayer_xx.deb 这
+三个软件包. 直接双击就能安装deb包.
 
-    # dpkg -i kwplayer.deb
+先安装python3-xlib, 之后是python3-keybinder, 最后是kwplayer.
+
+当然, 也可以在终端里安装, 比如:
+
+    # dpkg -i kwplayer_xx.deb
     # apt-get -f install
 
 
