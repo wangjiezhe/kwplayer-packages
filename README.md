@@ -20,12 +20,12 @@ Debian系
 Fedora系
 =======
 Fedora 的打包工作是由 mosquito (@1dot75cm) 负责. 目前支持 fc19, fc20, fc21, fc22.
-更多其他开源软件欢迎访问 [myrepo](https://copr.fedoraproject.org/coprs/mosquito/myrepo/) 查询.
+更多其他开源软件欢迎访问 [myrepo](https://copr.fedoraproject.org/coprs/mosquito/myrepo/) 主页进行查询.
 
 *安装步骤:*
 
 	# yum install dnf-plugins-core
-	# dnf copr enable mosquito/myrepo    # 或直接到 [myrepo](https://copr.fedoraproject.org/coprs/mosquito/myrepo/), 下载对应 repo 文件到 /etc/yum.repos.d/ 中
+	# dnf copr enable mosquito/myrepo    # 或直接到 myrepo 源主页, 下载对应 repo 文件到 /etc/yum.repos.d/ 中
 	# dnf localinstall http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 	# dnf install kwplayer
 
@@ -35,7 +35,7 @@ Fedora 的打包工作是由 mosquito (@1dot75cm) 负责. 目前支持 fc19, fc2
 RHEL系
 ======
 RHEL 的打包工作也由 mosquito 负责. 目前支持 el7.
-更多其他开源软件欢迎访问 [myrepo](https://copr.fedoraproject.org/coprs/mosquito/myrepo/) 查询.
+更多其他开源软件欢迎访问 [myrepo](https://copr.fedoraproject.org/coprs/mosquito/myrepo/) 主页进行查询.
 
 *安装步骤:*
 
