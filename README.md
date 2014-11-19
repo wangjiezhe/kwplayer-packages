@@ -3,9 +3,9 @@
 这个项目用于存放kwplayer为各个发行版打好了的安装包, 推荐一般用户直接使用
 这里的安装包, 因为这最简单, 也最不易出问题.
 
+
 Debian系
 =======
-
 需要下载 python3-xlib_xx.deb, python3-keybinder_xx.deb, kwplayer_xx.deb 这
 三个软件包. 直接双击就能安装deb包.
 
@@ -19,25 +19,30 @@ Debian系
 
 Fedora系
 =======
-Fedora 的打包工作是由 Wang Jiezhe (@wangjiezhe) 负责.
+Fedora 的打包工作是由 mosquito (@1dot75cm) 负责. 目前支持 fc19, fc20, fc21, fc22.
+更多其他开源软件欢迎访问 [myrepo](https://copr.fedoraproject.org/coprs/mosquito/myrepo/) 主页进行查询.
 
-首先要安装好rpmfushion, 可以参考这篇文章:<http://blog.csdn.net/sabalol/article/details/9286073>
+*安装步骤:*
 
-**建议安装方式:**
-
-使用 dnf 并安装 dnf-plugins-core, 然后直接运行:
-
-	# dnf copr enable wangjiezhe/kwplayer
+	# yum install dnf-plugins-core
+	# dnf copr enable mosquito/myrepo    # 或直接到 myrepo 源主页, 下载对应 repo 文件到 /etc/yum.repos.d/ 中
+	# dnf localinstall http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 	# dnf install kwplayer
 
-即可.
+**注: 因为有几个依赖包不在官方源内, 请添加 rpmfusion 源和 myrepo 源, 否则直接安装 rpm 包会出错**
 
-或者直接到 <http://copr.fedoraproject.org/coprs/wangjiezhe/kwplayer/> 下载对应的
-repo 文件放到 /etc/yum.repos.d/ 中, 然后运行
 
+RHEL系
+======
+RHEL 的打包工作也由 mosquito 负责. 目前支持 el7.
+更多其他开源软件欢迎访问 [myrepo](https://copr.fedoraproject.org/coprs/mosquito/myrepo/) 主页进行查询.
+
+*安装步骤:*
+
+	# yum install epel-release
+	# yum-config-manager --add-repo=https://copr.fedoraproject.org/coprs/mosquito/myrepo/repo/epel-$(rpm -E %?rhel)/mosquito-myrepo-epel-$(rpm -E %?rhel).repo
+	# yum localinstall http://li.nux.ro/download/nux/dextop/el$(rpm -E %rhel)/x86_64/nux-dextop-release-0-2.el$(rpm -E %rhel).nux.noarch.rpm
 	# yum install kwplayer
-
-**注: 因为有几个依赖包不在官方源内, 请使用上面的 repo 文件, 否则直接安装 rpm 包可能会出错**
 
 
 Arch Linux
