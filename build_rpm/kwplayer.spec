@@ -7,9 +7,11 @@
 
 %{!?python3_sitelib: %global python3_sitelib %(%{__python3} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())")}
 
+%define pycairo_version 1.10.1
+
 Name:           kwplayer
-Version:        3.4.5
-Release:        1%{?dist}
+Version:        3.4.6
+Release:        2%{?dist}
 Summary:        An elegant music player which can get songs from kuwo.cn
 
 License:        GPLv3
@@ -25,6 +27,8 @@ BuildRequires:  python3-devel
 Requires:  python3
 Requires:  python3-dbus
 Requires:  python3-gobject
+Requires:  python3-ply
+Requires:  python3-cairo >= %{1.10.1}
 Requires:  gstreamer1-plugins-base
 Requires:  gstreamer1-plugins-good
 Requires:  gstreamer1-plugins-ugly
@@ -79,7 +83,7 @@ rm -rf $RPM_BUILD_ROOT
 cd %{python3_sitelib}
 for file in kwplayer*
 do
-    if [ -f $file ] && [ $file != "kwplayer-%{version}-py3.3.egg-info" ]
+    if [ -f $file ] && [[ $file != "kwplayer-%{version}-py%{python3_version}.egg-info" ]]
     then
         rm $file
     fi
