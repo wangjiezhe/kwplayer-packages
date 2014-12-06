@@ -11,7 +11,7 @@
 
 Name:           kwplayer
 Version:        3.4.6
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        An elegant music player which can get songs from kuwo.cn
 
 License:        GPLv3
@@ -69,7 +69,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc LICENSE README.md HISTORY
 %{python3_sitelib}/*
 %{_datadir}/icons/*
-%{_datadir}/kuwo/*
+%{_datadir}/kwplayer/*
 %{_bindir}/*
 %{_datadir}/applications/%{name}.desktop
 # following sections for the compatition with Debian wheezy and Ubuntu 12.04 are removed.
