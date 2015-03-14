@@ -10,7 +10,7 @@
 %define pycairo_version 1.10.1
 
 Name:           kwplayer
-Version:        3.5.1
+Version:        3.5.2
 Release:        1%{?dist}
 Summary:        An elegant music player which can get songs from kuwo.cn
 
